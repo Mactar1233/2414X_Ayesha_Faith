@@ -1,6 +1,7 @@
  #include "main.h"
   pros::Motor lift (10, true);
   pros::Motor clampM (4, true);
+  clampM.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
 
    void liftcontrol(){
       if (master.get_digital(DIGITAL_R2)) {
