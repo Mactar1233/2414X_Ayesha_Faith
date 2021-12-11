@@ -1,0 +1,2 @@
+void liftcontrol();
+void clampcontrol();
