@@ -1,7 +1,7 @@
  #include "main.h"
   pros::Motor lift (10, true);
   pros::Motor clampM (4, true);
-  clampM.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
+
 
    void liftcontrol(){
       if (master.get_digital(DIGITAL_R2)) {
@@ -14,6 +14,7 @@
     }
  }
        void clampcontrol(){
+        clampM.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
       if (master.get_digital(DIGITAL_L2)) {
       clampM.move_voltage(12000); // This is 100 because it's a 100rpm motor
     }
